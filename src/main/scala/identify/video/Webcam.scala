@@ -5,6 +5,7 @@ import akka.actor.{ ActorLogging, ActorSystem, DeadLetterSuppression, Props }
 import akka.stream.actor.ActorPublisher
 import akka.stream.actor.ActorPublisherMessage.{ Cancel, Request }
 import akka.stream.scaladsl.Source
+import akka.stream.stage.GraphStage
 import org.bytedeco.javacpp.opencv_core._
 import org.bytedeco.javacv.{ Frame, FrameGrabber }
 import org.bytedeco.javacv.FrameGrabber.ImageMode
@@ -16,11 +17,12 @@ object Webcam {
    *
    * @param deviceId device ID for the webcam
    * @param dimensions
-   * @param bitsPerPixel
+   * @param bitsPerPsbixel
    * @param imageMode
    * @param system ActorSystem
    * @return a Source of [[Frame]]s
    */
+
   def source(
     deviceId: Int,
     dimensions: Dimensions,
