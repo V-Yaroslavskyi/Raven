@@ -1,24 +1,5 @@
 #!/usr/bin/env python
 
-'''
-pyquadsim_server.py - Automatically-launched Python server script for PyQuadSim
-
-Translates simulation values from V-REP to sensor values for quadrotor model
-
-    Copyright (C) 2014 Bipeen Acharya, Fred Gisa, and Simon D. Levy
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as 
-    published by the Free Software Foundation, either version 3 of the 
-    License, or (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-'''
-
 # Import your controller here =====================================================
 
 #from quadstick import ExtremePro3D as Controller
