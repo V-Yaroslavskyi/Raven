@@ -18,7 +18,7 @@ class Detector(cascadePath: String) {
 
     val rects = new RectVector()
     faceCascade.detectMultiScale(mat, rects, 1.3, 20, CV_HAAR_SCALE_IMAGE, minSizeOpenCV, maxSizeOpenCV)
-    (0L to rects.size()).toList.map(rects.get)
+    (0L to rects.size()).toList.flatMap{i =>Option(rects.get(i))}
   }
 
 }
